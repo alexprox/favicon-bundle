@@ -4,8 +4,8 @@ Getting Started
 ## Installation
 
 1. Download bundle using composer
-2. Enable the bundle
-3. Import bundle routing files
+2. Enable bundle
+3. Import bundle routing file
 4. Icon import
 5. Use it!
 
@@ -29,9 +29,9 @@ $ php composer.phar update alexprox/favicon-bundle
 
 Composer will install the bundle to your project's `vendor/alexprox` directory.
 
-### Step 2: Enable the bundle
+### Step 2: Enable bundle
 
-Enable the bundle in the kernel:
+Enable bundle in the kernel:
 
 ``` php
 <?php
@@ -46,7 +46,7 @@ public function registerBundles()
 }
 ```
 
-### Step 3: Import bundle routing files
+### Step 3: Import bundle routing file
 
 ``` yaml
 # app/config/routing.yml
@@ -73,7 +73,7 @@ At your layout template template:
     <!DOCTYPE html>
     <html>
         <head>
-            {{ '#ffffff'|icons }}
+            {{ icons() }}
             ...
 
 ```
