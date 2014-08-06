@@ -1,0 +1,17 @@
+{
+    "name": "alexprox/favicon-bundle",
+    "description": "Creates all favicon routes",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "alexprox91@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.0"
+    },
+    "autoload": {
+        "psr-0": { "Alexprox\\": "src/" }
+    }
+}
