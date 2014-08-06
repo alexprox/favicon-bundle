@@ -1,6 +1,7 @@
 {
+    "version": "1.0",
     "name": "alexprox/favicon-bundle",
-    "description": "Creates all favicon routes",
+    "description": "Simple Symfony 2 Bundle that generates icons (exc. Win8/IE11), caches it and generates all meta tags",
     "license": "MIT",
     "authors": [
         {

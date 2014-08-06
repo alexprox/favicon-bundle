@@ -16,7 +16,7 @@ Add bundle in your composer.json:
 ```js
 {
     "require": {
-        "alexprox/favicon-bundle": "@todo"
+        "alexprox/favicon-bundle": "1.*"
     }
 }
 ```
