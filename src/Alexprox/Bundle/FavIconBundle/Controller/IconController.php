@@ -6,5 +6,8 @@ use \Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class IconController extends Controller
 {
+    public function getAction()
+    {
 
+    }
 }
