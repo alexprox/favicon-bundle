@@ -1,0 +1,5 @@
+services:
+    alexprox.favicon.twig.meta_icon_extension:
+        class: Alexprox\Bundle\FavIconBundle\Twig\MetIconExtension
+        tags:
+            - { name: twig.extension }
