@@ -57,8 +57,13 @@ alexprox_favicon:
 
 ### Step 4: Icon import
 
-Place your icon.png into to your project's `web` directory
-(icon MUST be square with size 260px or more)
+Place your icon to your project's `web` directory.
+
+Icon must be:
+* With name `icon.png`
+* Square
+* With size `260px` or more
+* With `read` permissions for all
 
 ### Step 5: Use it!
 
