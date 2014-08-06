@@ -7,6 +7,7 @@ Getting Started
 2. Enable the bundle
 3. Import bundle routing files
 4. Icon import
+5. Use it!
 
 ### Step 1: Download bundle using composer
 
@@ -57,4 +58,17 @@ alexprox_favicon:
 ### Step 4: Icon import
 
 Place your icon.png into to your project's `web` directory
-(icon MUST be square with >=260px size)
+(icon MUST be square with size 260px or more)
+
+### Step 5: Use it!
+
+At your layout template template:
+
+``` twig
+    <!DOCTYPE html>
+    <html>
+        <head>
+            {{ '#ffffff'|icons }}
+            ...
+
+```
