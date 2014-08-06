@@ -22,7 +22,6 @@ class IconLinkTag
     /**
      * @param string $rel
      * @param string $sizes
-     * @param string $type
      * @param bool|string $hrefFileName
      * @return IconLinkTag
      */
