@@ -1,0 +1,6 @@
+alexprox_favicon_get:
+    pattern:  /{type}-{size}.png
+    defaults: { _controller: AlexproxFavIconBundle:Icon:get }
+    requirements:
+        type: apple-touch|favicon|mstile
+        size: 16x16|32x32|57x57|60x60|72x72|76x76|96x96|114x114|120x120|144x144|152x152|160x160|196x196
