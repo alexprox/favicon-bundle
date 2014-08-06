@@ -17,11 +17,6 @@ class IconLinkTag
     /**
      * @var string
      */
-    private $type;
-
-    /**
-     * @var string
-     */
     private $hrefFileName;
 
     /**
@@ -31,14 +26,13 @@ class IconLinkTag
      * @param bool|string $hrefFileName
      * @return IconLinkTag
      */
-    public function __construct($rel, $sizes, $hrefFileName = false, $type = 'image/png')
+    public function __construct($rel, $sizes, $hrefFileName = false)
     {
         if (!$hrefFileName) {
             $hrefFileName = $rel;
         }
         $this->rel = $rel;
         $this->sizes = $sizes;
-        $this->type = $type;
         $this->hrefFileName = $hrefFileName;
     }
 
@@ -48,7 +42,7 @@ class IconLinkTag
     public function generate()
     {
         return sprintf(
-            '<link rel="%s" sizes="%s" href="/%s-%s.png">',
+            '<link rel="%s" sizes="%s" href="/%s-%s.png" type="image/png">',
 
             $this->rel,
             $this->sizes,

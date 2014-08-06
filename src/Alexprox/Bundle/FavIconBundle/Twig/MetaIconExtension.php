@@ -39,7 +39,7 @@ class MetaIconExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('icons', array($this, 'iconsFilter'))
+            new \Twig_SimpleFilter('icons', array($this, 'iconsFilter'), array('is_safe' => array('html')))
         );
     }
 
