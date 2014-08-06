@@ -1,6 +1,20 @@
 alexprox_favicon_get:
-    pattern:  /{type}-{size}.png
-    defaults: { _controller: AlexproxFavIconBundle:Icon:get }
+    pattern:  /{file}.png
+    defaults: { _controller: AlexproxFavIconBundle:Icon:getDefault }
     requirements:
-        type: apple-touch|favicon|mstile
+        file: apple-touch-icon|apple-touch-icon-precomposed
+
+#alexprox_favicon_get_xml:
+#    pattern:  /browserconfig.xml
+#    defaults: { _controller: AlexproxFavIconBundle:Xml:get }
+
+alexprox_favicon_get_png:
+    pattern:  /{type}-{size}.png
+    defaults: { _controller: AlexproxFavIconBundle:Icon:getPng }
+    requirements:
+        type: apple-touch-icon|favicon
         size: 16x16|32x32|57x57|60x60|72x72|76x76|96x96|114x114|120x120|144x144|152x152|160x160|196x196
+
+alexprox_favicon_get_ico:
+    pattern:  /favicon.ico
+    defaults: { _controller: AlexproxFavIconBundle:Icon:getIco }

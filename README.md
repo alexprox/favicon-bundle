@@ -7,6 +7,7 @@ Getting Started
 2. Enable the bundle
 3. Import bundle routing files
 4. Icon import
+5. Use it!
 
 ### Step 1: Download bundle using composer
 
@@ -56,5 +57,29 @@ alexprox_favicon:
 
 ### Step 4: Icon import
 
-Place your icon.png into to your project's `web` directory
-(icon MUST be square with >=260px size)
+Place your icon to your project's `web` directory.
+
+Icon must be:
+* With name `icon.png`
+* Square
+* With size `260px` or more
+* With `read` permissions for all
+
+### Step 5: Use it!
+
+At your layout template template:
+
+``` twig
+    <!DOCTYPE html>
+    <html>
+        <head>
+            {{ '#ffffff'|icons }}
+            ...
+
+```
+
+## What is broken?
+
+All Windows 8 (IE11) stuff
+* Tiles
+* browserconfig.xml

@@ -8,10 +8,9 @@ use Alexprox\Bundle\FavIconBundle\Helper\IconLinkTag;
 class MetaIconExtension extends \Twig_Extension
 {
     /**
-     * @param string $hexColor
      * @return array
      */
-    private function getTags($hexColor)
+    private function getTags()
     {
         return array(
             new IconLinkTag('apple-touch-icon', '57x57'),
@@ -28,30 +27,29 @@ class MetaIconExtension extends \Twig_Extension
             new IconLinkTag('icon', '160x160', 'favicon'),
             new IconLinkTag('icon', '196x196', 'favicon'),
 
-            new IconMetaTag('msapplication-TileColor', $hexColor),
-            new IconMetaTag('msapplication-TileImage', '/mstile-144x144.png')
+//            new IconMetaTag('msapplication-TileColor', $hexColor),
+//            new IconMetaTag('msapplication-TileImage', '/mstile-144x144.png')
         );
     }
 
     /**
      * @return array
      */
-    public function getFilters()
+    public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFilter('icons', array($this, 'iconsFilter'), array('is_safe' => array('html')))
+            new \Twig_SimpleFunction('icons', array($this, 'iconsFunction'), array('is_safe' => array('html')))
         );
     }
 
     /**
-     * @param string $msHexColor
      * @return string
      */
-    public function iconsFilter($msHexColor)
+    public function iconsFunction()
     {
         $content = '';
 
-        foreach ($this->getTags($msHexColor) as $tag) {
+        foreach ($this->getTags() as $tag) {
             /**
              * @var IconLinkTag|IconMetaTag $tag
              */
