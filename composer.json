@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "symfony/symfony": ">=2.0"
+        "symfony/symfony": ">=2.0",
+        "ext-imagick": "*"
     },
     "autoload": {
         "psr-0": { "Alexprox\\": "src/" }
